@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+/* ── 분재 테마 (boon에서 이식: A24 × 수묵담채 / 한지 톤) ───────────── */
+:root {
+  --background: #f4efe3; /* 한지 크림 */
+  --foreground: #1c1610; /* 먹빛 */
+  --card: #ede5d4;
+  --card-foreground: #1c1610;
+  --primary: #7a9e8b; /* 청록(celadon) */
+  --primary-foreground: #f4efe3;
+  --secondary: #e4d9c8;
+  --muted: #d8cfc0;
+  --muted-foreground: #6e5e50;
+  --accent: #c15a3a; /* 주황/홍 (열매·낙관) */
+  --accent-foreground: #f4efe3;
+  --border: rgba(28, 22, 16, 0.13);
+  --ring: rgba(28, 22, 16, 0.25);
+  --radius: 1px;
+}
+
+/* Tailwind 4 인라인 테마 매핑 — bg-background, text-foreground 등 사용 가능 */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+
+  --font-serif: "Noto Serif KR", serif;
+  --font-sans-kr: "Noto Sans KR", sans-serif;
+  --font-display: "Josefin Sans", sans-serif;
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  html {
+    font-size: 16px;
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans-kr);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* 수묵담채 로딩 — 분재가 먹으로 그려지는 듯한 stroke 애니메이션 */
+@keyframes ink-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes ink-breathe {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 1; }
+}
+.ink-draw path {
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  animation: ink-draw 3.2s ease-in-out forwards;
+}
+.ink-breathe {
+  animation: ink-breathe 2.4s ease-in-out infinite;
+}

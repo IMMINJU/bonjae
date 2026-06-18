@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#F4EFE3"/>
+  <rect x="9" y="9" width="46" height="46" rx="4" fill="none" stroke="#B81C1C" stroke-width="3.5"/>
+  <rect x="14" y="14" width="36" height="36" rx="2" fill="none" stroke="#B81C1C" stroke-width="1"/>
+  <text x="32" y="44" text-anchor="middle" fill="#B81C1C" font-size="30" font-weight="700" font-family="'Noto Serif KR','Apple SD Gothic Neo','Malgun Gothic',serif">분</text>
+</svg>
