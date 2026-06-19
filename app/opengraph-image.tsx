@@ -64,7 +64,7 @@ export default function Image() {
           Your career, drawn as an ink-wash bonsai
         </div>
         <div style={{ fontSize: 21, color: "#7a9e8b", marginTop: 30, letterSpacing: 3 }}>
-          trunk · branches · roots · fruit · light
+          trunk · branches · roots · fruit
         </div>
       </div>
     ),

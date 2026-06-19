@@ -21,7 +21,6 @@ const LEGEND = [
   { key: "가지", val: "옆 역량" },
   { key: "뿌리", val: "깊이" },
   { key: "열매", val: "성과" },
-  { key: "빛", val: "환경" },
 ];
 
 export default function ResultClient({ jobId }: { jobId: string }) {

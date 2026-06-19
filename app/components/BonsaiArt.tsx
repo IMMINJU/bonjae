@@ -73,11 +73,6 @@ export function BonsaiIllustration({
           <feTurbulence type="fractalNoise" baseFrequency="0.055 0.08" numOctaves="2" seed="4" result="noise" />
           <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
         </filter>
-        <radialGradient id="lgLight" cx="80%" cy="10%" r="58%">
-          <stop offset="0%" stopColor="#A8C4B2" stopOpacity="0.24" />
-          <stop offset="60%" stopColor="#BCD0C5" stopOpacity="0.09" />
-          <stop offset="100%" stopColor="#A8C4B2" stopOpacity="0" />
-        </radialGradient>
         <radialGradient id="lgCanopy" cx="52%" cy="38%" r="52%">
           <stop offset="0%" stopColor={sage} stopOpacity="0.10" />
           <stop offset="100%" stopColor={sage} stopOpacity="0" />
@@ -85,7 +80,6 @@ export function BonsaiIllustration({
       </defs>
 
       {/* 분위기 */}
-      <ellipse cx="360" cy="75" rx="175" ry="155" fill="url(#lgLight)" />
       <ellipse cx="210" cy="185" rx="190" ry="165" fill="url(#lgCanopy)" />
 
       {/* 잎 색 워시 */}
@@ -152,8 +146,6 @@ export function BonsaiIllustration({
           <circle cx="370" cy="142" r="2.2" fill={annotCol} />
           <line x1="370" y1="142" x2="404" y2="122" stroke={annotCol} strokeWidth="0.75" strokeDasharray="3 3" />
           <text x="409" y="120" textAnchor="start" letterSpacing="0.5">열매</text>
-          <text x="366" y="42" textAnchor="end" fill="#9A8540" opacity="0.72" letterSpacing="0.5">빛</text>
-          <line x1="370" y1="44" x2="388" y2="52" stroke="#C4A855" strokeWidth="0.75" strokeDasharray="3 3" opacity="0.55" />
         </g>
       )}
     </svg>
